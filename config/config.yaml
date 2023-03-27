@@ -1,0 +1,39 @@
+privacy_setting: dp
+evaluation: false
+
+seeds: [0]
+log_wandb: false
+save_features: true
+
+path:
+  raw: /media/sarah/data/raw
+  features: /media/sarah/data/features
+
+dataset: 
+  name: pppp
+  train_size: 0.9
+  test_size: 0.1    
+  classes: [0, 1, 2]
+
+feature_extractor:
+  name: scatternet
+  J: 4
+  L: 2
+  m: 1
+
+classifier:
+  name: dp_cnn
+  scale_norm: true
+  batch_size: 128
+  max_physical_batch_size: 4
+  optimizer_name: nadam
+  epochs: 10
+  lr: 0.001
+  
+  epsilon: 1.0
+  delta: 1e-4
+  max_grad_norm: 1.2
+
+defaults:
+  - path: paths
+  - _self_

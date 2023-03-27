@@ -1,0 +1,26 @@
+privacy_setting: dp
+evaluation: true
+seeds: [0,1,2,3,4]
+log_wandb: false
+
+feature_extractor:
+  name: scatternet
+  J: 4
+  L: 2
+  m: 1
+
+classifier:
+  name: dp_gbdt
+  num_trees: 50
+  dp_method: gaussian_cdp
+  split_method: totally_random
+  sketch_type: uniform
+  undersampling: false
+  
+  epsilon: 1.0
+  delta: 1e-4
+
+defaults:
+ - dataset: pppp
+ - path: paths
+ - _self_

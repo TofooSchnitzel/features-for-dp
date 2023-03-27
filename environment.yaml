@@ -1,0 +1,58 @@
+name: fixed-features
+
+channels:
+  - default
+  - conda-forge
+  - pytorch
+  - nvidia
+
+dependencies:
+  - python==3.10
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::pytorch-cuda==11.7
+  - conda-forge::cudatoolkit
+  - conda-forge::cudnn==8.2.1.32
+  - conda-forge::wandb
+  - conda-forge::scikit-learn
+  - conda-forge::scikit-image
+  - nvidia::cuda-nvcc
+  - ipykernel
+  - conda-forge::h5py
+  - conda-forge::pandas
+  - black
+  - pytest
+  - pylint
+  - conda-forge::diffprivlib
+  - conda-forge::rapids
+  - conda-forge::pillow
+  - conda-forge::cupy
+  - conda-forge::tqdm
+  - conda-forge::hydra-core
+  - conda-forge::pyyaml
+  - conda-forge::matplotlib
+  - conda-forge::numpy
+  - conda-forge::numba
+  - conda-forge::tqdm
+  - conda-forge::bitarray==2.6.2
+  - conda-forge::fast-histogram
+  - conda-forge::pathos==0.3.0
+  - conda-forge::pmlb
+  - conda-forge::scipy==1.10.0
+  - conda-forge::statsmodels==0.13.5
+  - conda-forge::opacus
+  - conda-forge::imbalanced-learn
+  - pip
+  - pip:
+    - perflint
+    - deepee
+    - split-folders
+    - kymatio
+    - autodp==0.2
+    - xxhash
+    - interpret
+    - tabpfn
+
+# see github ObjaxDPTraining from alex
+# additionally needed to install cuda support from objax
+# pip install --upgrade jax[cuda]==0.3.15 jaxlib==0.3.15+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && pip install objax==1.6.0

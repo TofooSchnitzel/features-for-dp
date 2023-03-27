@@ -1,0 +1,24 @@
+privacy_setting: dp
+evaluation: true
+seeds: [0,1,2,3,4]
+log_wandb: true
+
+feature_extractor:
+  name: radimagenet
+
+classifier:
+  name: dp_linear
+  epsilon: 1.0
+  delta: 1e-4
+  max_grad_norm: 1.2
+
+  batch_size: 64
+  max_physical_batch_size: 64
+  optimizer_name: nadam
+  epochs: 10
+  lr: 0.01
+
+defaults:
+ - dataset: pppp
+ - path: paths
+ - _self_

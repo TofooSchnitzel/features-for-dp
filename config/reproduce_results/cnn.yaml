@@ -1,0 +1,28 @@
+privacy_setting: dp
+evaluation: true
+seeds: [0,1,2,3,4]
+log_wandb: true
+
+dataset: 
+  name: pppp
+  train_size: 0.9
+  test_size: 0.1    
+  classes: [0, 1, 2]
+
+classifier:
+  name: dp_cnn
+  scale_norm: true
+  batch_size: 256
+  max_physical_batch_size: 4
+  optimizer_name: nadam
+  epochs: 10
+  lr: 0.001
+  
+  epsilon: 1.0
+  delta: 1e-4
+  max_grad_norm: 1.2
+
+defaults:
+ - dataset: pppp
+ - path: paths
+ - _self_
