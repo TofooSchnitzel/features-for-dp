@@ -14,4 +14,4 @@
 
 ## Installation
 - Install the required dependencies with conda env create -f environment.yaml
-- Install with pip: # pip install --upgrade jax[cuda]==0.3.15 jaxlib==0.3.15+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && pip install objax==1.6.0
+- Install with pip: pip install --upgrade jax[cuda]==0.3.15 jaxlib==0.3.15+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && pip install objax==1.6.0
