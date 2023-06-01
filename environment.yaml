@@ -52,7 +52,3 @@ dependencies:
     - xxhash
     - interpret
     - tabpfn
-
-# see github ObjaxDPTraining from alex
-# additionally needed to install cuda support from objax
-# pip install --upgrade jax[cuda]==0.3.15 jaxlib==0.3.15+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && pip install objax==1.6.0
